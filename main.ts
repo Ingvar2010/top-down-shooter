@@ -1,4 +1,4 @@
-controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
+controller.player1.onButtonEvent(ControllerButton.Up, ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
     p1,
     [img`
@@ -40,103 +40,52 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     true
     )
 })
-controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
+controller.player2.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function () {
+	
+})
+controller.player2.onButtonEvent(ControllerButton.Down, ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
-    p1,
+    p2,
     [img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        . . . . . . . e e e . . . . . . 
-        . . . . . . . d d e e . . . . . 
-        . . . . . . . f d e e . . . . . 
-        . . . . . . . d d d e . . . . . 
-        . . . . . . . d d e e . . . . . 
-        . . . . . . . . d e e . . . . . 
-        . . . . . . . 7 7 7 . . . . . . 
-        . . . . . . . 7 7 7 . . . . . . 
-        . . . . . . . 7 7 7 . . . . . . 
-        . . . . . . . a a a . . . . . . 
-        . . . . . a a a . c . . . . . . 
-        . . . . . a . . . c c f . . . . 
-        . . . . f f . . . . . f . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . e e e e e e . . . . . 
+        . . . . e e d d d d e e . . . . 
+        . . . . e d d d d d d e . . . . 
+        . . . . e d f d d f d e . . . . 
+        . . . . e d d d d d d e . . . . 
+        . . . . e e d d d d e e . . . . 
+        . . . . . 8 8 8 8 8 8 . . . . . 
+        . . . . . 8 8 8 8 8 8 . . . . . 
+        . . . . . 8 f f f f 8 . . . . . 
+        . . . . . d f . . f d . . . . . 
+        . . . . . 2 2 . . . . . . . . . 
         `,img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        . . . . . . . e e e . . . . . . 
-        . . . . . . . d d e e . . . . . 
-        . . . . . . . f d e e . . . . . 
-        . . . . . . . d d d e . . . . . 
-        . . . . . . . d d e e . . . . . 
-        . . . . . . . . d e e . . . . . 
-        . . . . . . . 7 7 7 . . . . . . 
-        . . . . . . . 7 7 7 . . . . . . 
-        . . . . . . . 7 7 7 . . . . . . 
-        . . . . . . . a a a . . . . . . 
-        . . . . . . . a . c . . . . . . 
-        . . . . . . . a . c . . . . . . 
-        . . . . . . f f f f . . . . . . 
-        `,img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . e e e . . . . . . 
-        . . . . . . . d d e e . . . . . 
-        . . . . . . . f d e e . . . . . 
-        . . . . . . . d d d e . . . . . 
-        . . . . . . . d d e e . . . . . 
-        . . . . . . . . d e e . . . . . 
-        . . . . . . . 7 7 7 . . . . . . 
-        . . . . . . . 7 7 7 . . . . . . 
-        . . . . . . . 7 7 7 . . . . . . 
-        . . . . . . . a a a . . . . . . 
-        . . . . . c c c . a . . . . . . 
-        . . . . . c . . . a a f . . . . 
-        . . . . f f . . . . . f . . . . 
-        `,img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . e e e . . . . . . 
-        . . . . . . . d d e e . . . . . 
-        . . . . . . . f d e e . . . . . 
-        . . . . . . . d d d e . . . . . 
-        . . . . . . . d d e e . . . . . 
-        . . . . . . . . d e e . . . . . 
-        . . . . . . . 7 7 7 . . . . . . 
-        . . . . . . . 7 7 7 . . . . . . 
-        . . . . . . . 7 7 7 . . . . . . 
-        . . . . . . . a a a . . . . . . 
-        . . . . . . . c . a . . . . . . 
-        . . . . . . . c . a . . . . . . 
-        . . . . . . f f f f . . . . . . 
+        . . . . . e e e e e e . . . . . 
+        . . . . e e d d d d e e . . . . 
+        . . . . e d d d d d d e . . . . 
+        . . . . e d f d d f d e . . . . 
+        . . . . e d d d d d d e . . . . 
+        . . . . e e d d d d e e . . . . 
+        . . . . . 8 8 8 8 8 8 . . . . . 
+        . . . . . 8 8 8 8 8 8 . . . . . 
+        . . . . . 8 f f f f 8 . . . . . 
+        . . . . . d f . . f d . . . . . 
+        . . . . . . . . . 2 2 . . . . . 
         `],
     200,
     true
     )
 })
-controller.combos.attachCombo("a+d", function () {
-    projectile = sprites.createProjectileFromSprite(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . 2 . . . . . . . 
-        . . . . . . . . 2 . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, p1, 0, 180)
-})
-controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
+controller.player1.onButtonEvent(ControllerButton.Right, ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
     p1,
     [img`
@@ -212,7 +161,83 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     true
     )
 })
-controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
+controller.player1.onButtonEvent(ControllerButton.Left, ControllerButtonEvent.Pressed, function () {
+    animation.runImageAnimation(
+    p1,
+    [img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . e e e . . . . . . 
+        . . . . . . . d d e e . . . . . 
+        . . . . . . . f d e e . . . . . 
+        . . . . . . . d d d e . . . . . 
+        . . . . . . . d d e e . . . . . 
+        . . . . . . . . d e e . . . . . 
+        . . . . . . . 7 7 7 . . . . . . 
+        . . . . . . . 7 7 7 . . . . . . 
+        . . . . . . . 7 7 7 . . . . . . 
+        . . . . . . . a a a . . . . . . 
+        . . . . . a a a . c . . . . . . 
+        . . . . . a . . . c c f . . . . 
+        . . . . f f . . . . . f . . . . 
+        `,img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . e e e . . . . . . 
+        . . . . . . . d d e e . . . . . 
+        . . . . . . . f d e e . . . . . 
+        . . . . . . . d d d e . . . . . 
+        . . . . . . . d d e e . . . . . 
+        . . . . . . . . d e e . . . . . 
+        . . . . . . . 7 7 7 . . . . . . 
+        . . . . . . . 7 7 7 . . . . . . 
+        . . . . . . . 7 7 7 . . . . . . 
+        . . . . . . . a a a . . . . . . 
+        . . . . . . . a . c . . . . . . 
+        . . . . . . . a . c . . . . . . 
+        . . . . . . f f f f . . . . . . 
+        `,img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . e e e . . . . . . 
+        . . . . . . . d d e e . . . . . 
+        . . . . . . . f d e e . . . . . 
+        . . . . . . . d d d e . . . . . 
+        . . . . . . . d d e e . . . . . 
+        . . . . . . . . d e e . . . . . 
+        . . . . . . . 7 7 7 . . . . . . 
+        . . . . . . . 7 7 7 . . . . . . 
+        . . . . . . . 7 7 7 . . . . . . 
+        . . . . . . . a a a . . . . . . 
+        . . . . . c c c . a . . . . . . 
+        . . . . . c . . . a a f . . . . 
+        . . . . f f . . . . . f . . . . 
+        `,img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . e e e . . . . . . 
+        . . . . . . . d d e e . . . . . 
+        . . . . . . . f d e e . . . . . 
+        . . . . . . . d d d e . . . . . 
+        . . . . . . . d d e e . . . . . 
+        . . . . . . . . d e e . . . . . 
+        . . . . . . . 7 7 7 . . . . . . 
+        . . . . . . . 7 7 7 . . . . . . 
+        . . . . . . . 7 7 7 . . . . . . 
+        . . . . . . . a a a . . . . . . 
+        . . . . . . . c . a . . . . . . 
+        . . . . . . . c . a . . . . . . 
+        . . . . . . f f f f . . . . . . 
+        `],
+    200,
+    true
+    )
+})
+controller.player1.onButtonEvent(ControllerButton.Down, ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
     p1,
     [img`
@@ -254,70 +279,9 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     true
     )
 })
-controller.combos.attachCombo("a+r", function () {
-    projectile = sprites.createProjectileFromSprite(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . 2 2 . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, p1, 180, 0)
-})
-controller.combos.attachCombo("a+l", function () {
-    projectile = sprites.createProjectileFromSprite(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . 2 2 . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, p1, -180, 0)
-})
-controller.combos.attachCombo("a+u", function () {
-    projectile2 = sprites.createProjectileFromSprite(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . 2 . . . . . . . . 
-        . . . . . . . 2 . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, p1, 0, -180)
-})
-let projectile2: Sprite = null
-let projectile: Sprite = null
 let p1: Sprite = null
-let p2 = sprites.create(img`
+let p2: Sprite = null
+p2 = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
