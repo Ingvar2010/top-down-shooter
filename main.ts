@@ -1,3 +1,6 @@
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile0`, function (sprite, location) {
+    tiles.setCurrentTilemap(tilemap`level1`)
+})
 controller.player2.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Repeated, function () {
     projectile = sprites.createProjectileFromSprite(img`
         . . . . . . . . . . . . . . . . 
@@ -431,6 +434,9 @@ controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Press
         . . . . . . . . . . . . . . . . 
         `, p1, 180, 0)
 })
+controller.player2.onEvent(ControllerEvent.Connected, function () {
+    p2.setPosition(200, 25)
+})
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     mp.changePlayerStateBy(mp.playerSelector(mp.PlayerNumber.Two), MultiplayerState.score, 1)
 })
@@ -592,7 +598,7 @@ p1 = sprites.create(img`
     . . . . . d a . . a d . . . . . 
     . . . . . f f . . f f . . . . . 
     `, SpriteKind.Player)
-tiles.setCurrentTilemap(tilemap`level1`)
+tiles.setCurrentTilemap(tilemap`level6`)
 controller.moveSprite(p1)
 scene.cameraFollowSprite(p1)
 controller.player2.moveSprite(p2)
