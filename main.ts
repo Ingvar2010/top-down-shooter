@@ -1,5 +1,6 @@
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile0`, function (sprite, location) {
     tiles.setCurrentTilemap(tilemap`level1`)
+    p2.setPosition(50, 24)
 })
 controller.player2.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Repeated, function () {
     projectile = sprites.createProjectileFromSprite(img`
